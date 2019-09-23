@@ -212,7 +212,6 @@ public class ReadMoreTextView: UITextView {
     
     public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         return hitTest(pointInGliphRange: point, event: event) { _ in
-            guard pointIsInReadMoreOrReadLessTextRange(point: point) != nil else { return nil }
             return self
         }
     }
